@@ -8,6 +8,7 @@ A Streamlit-based application that helps users create stories using random emoji
 
 ## System Architecture
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 graph TD
     A[User Interface] --> B[Emoji Manager]
     A --> C[Data Store]
@@ -16,17 +17,13 @@ graph TD
     C --> F[Atomic JSON Storage]
     G[Logger] --> H[Error Log]
     A & B & C & D & E & F --> G
-    
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#bbf,stroke:#333,stroke-width:2px
-    style G fill:#fbb,stroke:#333,stroke-width:2px
 ```
 
 ## Key Workflows
 
 ### Story Creation Flow
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 sequenceDiagram
     participant U as User
     participant UI as Interface
@@ -51,18 +48,18 @@ sequenceDiagram
 
 ### Error Handling Flow
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 graph TD
     A[Error Occurs] --> B[Logger Captures]
     B --> C[Write to error.log]
     C --> D[Create Backup if Data]
     D --> E[Continue Operation]
     E --> F[UI Updates]
-    
-    style B fill:#fbb,stroke:#333,stroke-width:2px
 ```
 
 ### Session Management Flow
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 sequenceDiagram
     participant DS as Data Store
     participant FL as File Lock
