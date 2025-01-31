@@ -1,5 +1,8 @@
 # Emoji Story Builder
 
+## repo
+https://github.com/pleabargain/emoji-story-builder
+
 ## Project Overview
 A Streamlit-based application that helps users create stories using random emojis. The application dynamically sizes emojis to fit the screen, allows for note-taking, and maintains a history of interactions in JSON format with atomic file operations and comprehensive error logging.
 
