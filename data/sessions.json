@@ -1,0 +1,52 @@
+{
+  "sessions": [
+    {
+      "session_id": "fe64db53-3a73-4ad9-9cb1-8c078df17f0c",
+      "timestamp": "2025-01-31T09:02:12.901711Z",
+      "emojis": [
+        "\ud83d\ude0d",
+        "\ud83d\udc3a",
+        "\ud83d\udeab"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "23a96255-5421-4145-9479-bc54ef7aed3d",
+      "timestamp": "2025-01-31T09:02:20.865153Z",
+      "emojis": [
+        "\ud83c\udf17",
+        "\ud83d\ude1b",
+        "\ud83c\udf76",
+        "\ud83d\udddd\ufe0f",
+        "\ud83d\udce5",
+        "\ud83c\udf34",
+        "\ud83d\ude9e"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "f4e18888-5105-4c89-bb73-69bce480581c",
+      "timestamp": "2025-01-31T09:02:49.774189Z",
+      "emojis": [
+        "\u00a9\ufe0f",
+        "\ud83d\udc6f\u200d\u2640\ufe0f",
+        "\ud83d\udd0a",
+        "\ud83d\udd12",
+        "\ud83d\udc5d"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "24338a23-b693-4ae6-924a-6fca83f52e1e",
+      "timestamp": "2025-01-31T09:03:42.635375Z",
+      "emojis": [
+        "\u00a9\ufe0f",
+        "\ud83d\udc6f\u200d\u2640\ufe0f",
+        "\ud83d\udd0a",
+        "\ud83d\udd12",
+        "\ud83d\udc5d"
+      ],
+      "notes": "There was a \u00a9\ufe0f on \ud83d\udd12 but the\ud83d\udc6f\u200d\u2640\ufe0ffigured out how to put the \u00a9\ufe0f into their \ud83d\udc5d.\n"
+    }
+  ]
+}
