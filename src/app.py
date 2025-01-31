@@ -123,64 +123,90 @@ def main():
             logger.error(f"Initialization failed: {str(e)}")
             st.error("Failed to initialize application. Please ensure all dependencies are installed.")
             return
+
+        # Create tabs
+        main_tab, history_tab, readme_tab = st.tabs(["Story Builder", "History", "Documentation"])
+
+        # Main tab content
+        with main_tab:
         
-        # Emoji count selector
-        emoji_count = st.number_input(
-            "Number of Emojis",
-            min_value=1,
-            max_value=10,
-            value=3
-        )
-        
-        # Control buttons
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("Generate New Emojis"):
-                try:
-                    st.session_state.current_emojis = emoji_manager.get_random_emojis(emoji_count)
-                    save_current_session(data_store)
-                except Exception as e:
-                    logger.error(f"Failed to generate emojis: {str(e)}")
-                    st.error("Failed to generate emojis. Please try again.")
-                
-        with col2:
-            if st.button("Clear Results"):
-                try:
-                    st.session_state.current_emojis = []
-                    st.session_state.notes = ""
-                    emoji_manager.reset_session()
-                    logger.info("Session cleared")
-                except Exception as e:
-                    logger.error(f"Failed to clear session: {str(e)}")
-                    st.error("Failed to clear results. Please try again.")
-        
-        # Render emoji section
-        render_emoji_section(emoji_manager)
-        
-        # Notes section
-        try:
-            st.text_area(
-                "Your Story",
-                key="notes",
-                height=200,
-                placeholder="Write your story here...",
-                on_change=lambda: save_current_session(data_store)
+            # Emoji count selector
+            emoji_count = st.number_input(
+                "Number of Emojis",
+                min_value=1,
+                max_value=10,
+                value=3
             )
-        except Exception as e:
-            logger.error(f"Failed to render notes section: {str(e)}")
-            st.error("Failed to display notes section. Please refresh the page.")
         
-        # Display session history
-        if st.checkbox("Show Session History"):
+            # Control buttons
+            col1, col2 = st.columns(2)
+            with col1:
+                if st.button("Generate New Emojis"):
+                    try:
+                        st.session_state.current_emojis = emoji_manager.get_random_emojis(emoji_count)
+                        save_current_session(data_store)
+                    except Exception as e:
+                        logger.error(f"Failed to generate emojis: {str(e)}")
+                        st.error("Failed to generate emojis. Please try again.")
+                
+            with col2:
+                if st.button("Clear Results"):
+                    try:
+                        st.session_state.current_emojis = []
+                        st.session_state.notes = ""
+                        emoji_manager.reset_session()
+                        logger.info("Session cleared")
+                    except Exception as e:
+                        logger.error(f"Failed to clear session: {str(e)}")
+                        st.error("Failed to clear results. Please try again.")
+            
+            # Render emoji section
+            render_emoji_section(emoji_manager)
+            
+            # Notes section
             try:
-                sessions = data_store.get_all_sessions()
-                for session in sessions:
-                    with st.expander(f"Session from {session['timestamp']}"):
-                        st.write("Emojis: " + " ".join(session["emojis"]))
-                        st.write("Notes:", session["notes"])
+                st.text_area(
+                    "Your Story",
+                    key="notes",
+                    height=200,
+                    placeholder="Write your story here...",
+                    on_change=lambda: save_current_session(data_store)
+                )
             except Exception as e:
-                logger.error(f"Failed to display session history: {str(e)}")
-                st.error("Failed to load session history.")
+                logger.error(f"Failed to render notes section: {str(e)}")
+                st.error("Failed to display notes section. Please refresh the page.")
+            
+            # Display session history
+            if st.checkbox("Show Session History"):
+                try:
+                    sessions = data_store.get_all_sessions()
+                    for session in sessions:
+                        with st.expander(f"Session from {session['timestamp']}"):
+                            st.write("Emojis: " + " ".join(session["emojis"]))
+                            st.write("Notes:", session["notes"])
+                except Exception as e:
+                    logger.error(f"Failed to display session history: {str(e)}")
+                    st.error("Failed to load session history.")
+
+        # Readme tab content
+        with readme_tab:
+            try:
+                with open('readme.md', 'r', encoding='utf-8') as f:
+                    readme_content = f.read()
+                st.markdown(readme_content)
+            except Exception as e:
+                logger.error(f"Failed to load readme: {str(e)}")
+                st.error("Failed to load documentation. Please check if readme.md exists.")
+
+        # History tab content
+        with history_tab:
+            try:
+                with open('data/sessions.json', 'r', encoding='utf-8') as f:
+                    sessions_json = f.read()
+                st.code(sessions_json, language='json')
+            except Exception as e:
+                logger.error(f"Failed to load sessions history: {str(e)}")
+                st.error("Failed to load sessions history. Please check if sessions.json exists.")
         
     except Exception as e:
         logger.error(f"Application error: {str(e)}")
