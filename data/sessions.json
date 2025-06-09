@@ -136,6 +136,88 @@
         "\ud83d\ude4b\u200d\u2642\ufe0f"
       ],
       "notes": "There was a \ud83d\ude8a with a \ud83d\udce6. The \ud83d\ude4b\u200d\u2642\ufe0f wanted the \ud83d\udce6 so asked the driver of the \ud83d\ude8a to stop."
+    },
+    {
+      "session_id": "9b278612-b1df-4fa9-a83d-9ec4ffb0a566",
+      "timestamp": "2025-02-06T09:47:49.194986Z",
+      "emojis": [
+        "\ud83d\udc97",
+        "\ud83d\ude90",
+        "\ud83d\udcfb"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "e0a7f1a8-4e62-4f24-84e1-774196f157b0",
+      "timestamp": "2025-02-06T09:48:51.678066Z",
+      "emojis": [
+        "\ud83d\ude85",
+        "\ud83d\udc9e",
+        "\ud83d\udc66"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "c8662357-f59c-4252-aba3-95162f89da63",
+      "timestamp": "2025-02-06T09:50:02.022631Z",
+      "emojis": [
+        "\ud83c\udf71",
+        "\ud83c\udff3\ufe0f\u200d\ud83c\udf08",
+        "\ud83c\udf01"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "f63673af-b647-4fae-ae58-e023fc1b4e31",
+      "timestamp": "2025-02-06T09:50:55.327443Z",
+      "emojis": [
+        "\ud83d\udea2",
+        "\ud83d\udd07",
+        "\ud83d\udcac"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "4aeaa5d8-95d7-480e-8c16-8b5cd182385b",
+      "timestamp": "2025-02-06T09:51:38.409054Z",
+      "emojis": [
+        "\ud83c\udf24\ufe0f",
+        "\ud83d\ude2b",
+        "\ud83c\udfcb\ufe0f\u200d\u2640\ufe0f"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "22764549-254b-4597-8991-372392726575",
+      "timestamp": "2025-06-09T15:13:11.741141Z",
+      "emojis": [
+        "\ud83d\udc70\u200d\u2642\ufe0f",
+        "\ud83c\udfa7",
+        "\ud83d\udc68\u200d\ud83e\uddbd"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "7a6048a1-67fb-465c-9a25-e53bddcbdcac",
+      "timestamp": "2025-06-09T15:54:21.860815Z",
+      "emojis": [
+        "\ud83c\udf10",
+        "\ud83d\udc69\u200d\ud83c\udf93",
+        "\ud83d\udea3\u200d\u2642\ufe0f"
+      ],
+      "notes": ""
+    },
+    {
+      "session_id": "0d6e3bb1-420c-474e-bfa0-e573a0b59c69",
+      "timestamp": "2025-06-09T15:55:33.276570Z",
+      "emojis": [
+        "\ud83d\udc69\u200d\ud83d\udc69\u200d\ud83d\udc67",
+        "\ud83d\udea9",
+        "\ud83d\udcb0",
+        "\ud83c\udf52",
+        "\ud83d\udc69\u200d\ud83c\udfa4"
+      ],
+      "notes": ""
     }
   ]
 }

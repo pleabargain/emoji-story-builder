@@ -1,5 +1,180 @@
-[2025-01-31T12:42:38] [ERROR] This is an error message: Test error for logging
+[2025-06-09T19:12:35] [ERROR] Failed to render emoji section: st.session_state has no attribute "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization
 Traceback (most recent call last):
-  File "C:\Users\denni\Documents\emoji story builder\src\test_logger.py", line 27, in test_logging
-    raise ValueError("Test error for logging")
-ValueError: Test error for logging
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 394, in __getitem__
+    return self._getitem(widget_id, key)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 439, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 119, in __getattr__
+    return self[key]
+           ~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 90, in __getitem__
+    return get_session_state()[key]
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\safe_session_state.py", line 89, in __getitem__
+    return self._state[key]
+           ~~~~~~~~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 396, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\denni\Documents\emoji story builder\src\app.py", line 76, in render_emoji_section
+    if st.session_state.current_emojis:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 121, in __getattr__
+    raise AttributeError(_missing_attr_error_message(key))
+AttributeError: st.session_state has no attribute "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization
+[2025-06-09T19:12:35] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "c:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:13:05] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:13:11] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:52:29] [ERROR] Failed to render emoji section: st.session_state has no attribute "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization
+Traceback (most recent call last):
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 394, in __getitem__
+    return self._getitem(widget_id, key)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 439, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 119, in __getattr__
+    return self[key]
+           ~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 90, in __getitem__
+    return get_session_state()[key]
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\safe_session_state.py", line 89, in __getitem__
+    return self._state[key]
+           ~~~~~~~~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 396, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 77, in render_emoji_section
+    if st.session_state.current_emojis:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 121, in __getattr__
+    raise AttributeError(_missing_attr_error_message(key))
+AttributeError: st.session_state has no attribute "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization
+[2025-06-09T19:52:29] [ERROR] Application error: st.session_state has no attribute "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization
+Traceback (most recent call last):
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 394, in __getitem__
+    return self._getitem(widget_id, key)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 439, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 119, in __getattr__
+    return self[key]
+           ~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 90, in __getitem__
+    return get_session_state()[key]
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\safe_session_state.py", line 89, in __getitem__
+    return self._state[key]
+           ~~~~~~~~~~~^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state.py", line 396, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 168, in main
+    if st.session_state.current_emojis:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\denni\AppData\Roaming\Python\Python313\site-packages\streamlit\runtime\state\session_state_proxy.py", line 121, in __getattr__
+    raise AttributeError(_missing_attr_error_message(key))
+AttributeError: st.session_state has no attribute "current_emojis". Did you forget to initialize it? More info: https://docs.streamlit.io/library/advanced-features/session-state#initialization
+[2025-06-09T19:54:17] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:54:21] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:54:40] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:55:19] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:55:31] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:55:31] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:55:33] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:55:39] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:55:43] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-06-09T19:56:08] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 256, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'

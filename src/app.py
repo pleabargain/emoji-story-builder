@@ -7,6 +7,7 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
+import requests
 
 # Ensure src directory is in Python path for absolute imports
 src_dir = str(Path(__file__).parent.parent)
@@ -162,7 +163,68 @@ def main():
             
             # Render emoji section
             render_emoji_section(emoji_manager)
-            
+
+            # --- Story Generation Controls ---
+            if st.session_state.current_emojis:
+                st.markdown("**Generate a Story from these Emojis**")
+                word_count = st.slider(
+                    "Approximate Story Length (words)",
+                    min_value=50,
+                    max_value=500,
+                    value=150,
+                    step=10,
+                    help="Target number of words for the generated story."
+                )
+                temperature = st.slider(
+                    "Creativity (Temperature)",
+                    min_value=0.1,
+                    max_value=1.5,
+                    value=1.2,
+                    step=0.05,
+                    help="Higher values = more creative, lower = more focused."
+                )
+                if 'generated_story' not in st.session_state:
+                    st.session_state.generated_story = ""
+                if st.button("Generate Story from Emojis"):
+                    try:
+                        emoji_str = " ".join(st.session_state.current_emojis)
+                        prompt = (
+                            f"Write a creative story with a beginning, middle, and end, inspired by these emojis: {emoji_str}. "
+                            f"The story should be about {word_count} words long."
+                        )
+                        response = requests.post(
+                            "http://localhost:11434/api/generate",
+                            json={
+                                "model": "llama3.2",
+                                "prompt": prompt,
+                                "options": {"temperature": temperature}
+                            },
+                            timeout=60
+                        )
+                        response.raise_for_status()
+                        # Ollama returns a streaming response; collect the text
+                        story = ""
+                        for line in response.iter_lines():
+                            if line:
+                                try:
+                                    import json as _json
+                                    data = _json.loads(line)
+                                    if 'response' in data:
+                                        story += data['response']
+                                except Exception:
+                                    continue
+                        st.session_state.generated_story = story.strip()
+                    except Exception as e:
+                        logger.error(f"Failed to generate story: {str(e)}")
+                        st.error("Failed to generate story. Please check Ollama server and try again.")
+                st.text_area(
+                    "Generated Story",
+                    value=st.session_state.generated_story,
+                    height=250,
+                    key="generated_story_area"
+                )
+            # --- End Story Generation Controls ---
+
             # Notes section
             try:
                 st.text_area(
@@ -191,7 +253,7 @@ def main():
         # Readme tab content
         with readme_tab:
             try:
-                with open('readme.md', 'r', encoding='utf-8') as f:
+                with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
                     readme_content = f.read()
                 st.markdown(readme_content)
             except Exception as e:
@@ -214,3 +276,37 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # Test Ollama story generation logic
+    import json as _json
+    test_emojis = ["🦁", "🌳", "🚀"]
+    test_word_count = 120
+    test_temperature = 1.2
+    prompt = (
+        f"Write a creative story with a beginning, middle, and end, inspired by these emojis: {' '.join(test_emojis)}. "
+        f"The story should be about {test_word_count} words long."
+    )
+    print("Testing Ollama story generation...")
+    try:
+        response = requests.post(
+            "http://localhost:11434/api/generate",
+            json={
+                "model": "llama3.2",
+                "prompt": prompt,
+                "options": {"temperature": test_temperature}
+            },
+            timeout=60
+        )
+        response.raise_for_status()
+        story = ""
+        for line in response.iter_lines():
+            if line:
+                try:
+                    data = _json.loads(line)
+                    if 'response' in data:
+                        story += data['response']
+                except Exception:
+                    continue
+        print("Generated story:\n", story.strip())
+    except Exception as e:
+        print(f"Ollama story generation test failed: {str(e)}")

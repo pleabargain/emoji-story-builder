@@ -1,0 +1,5 @@
+[2025-01-31T12:42:38] [ERROR] This is an error message: Test error for logging
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\test_logger.py", line 27, in test_logging
+    raise ValueError("Test error for logging")
+ValueError: Test error for logging

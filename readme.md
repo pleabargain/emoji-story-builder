@@ -138,3 +138,24 @@ emoji-story-builder/
 - Dynamic size calculations
 - Screen dimension optimization
 - Minimum size guarantees (50px)
+
+## New Feature: AI Story Generation from Emojis (2024-06-09)
+
+You can now generate a creative story based on the currently displayed emojis using the Ollama Llama 3.2 model. This feature includes:
+
+- **Word Count Slider:** Choose the approximate length of the story (50–500 words).
+- **Temperature Slider:** Control the creativity of the generated story (0.1–1.5, default 1.2).
+- **Generate Story Button:** Sends the emojis, word count, and temperature to the Llama 3.2 model running locally via Ollama, and displays the generated story in the UI.
+- **Prompt Engineering:** The model is instructed to write a story with a beginning, middle, and end, inspired by the emojis.
+
+### How it Works
+1. Generate emojis as usual.
+2. Adjust the word count and temperature sliders below the emojis.
+3. Click "Generate Story from Emojis" to create a story.
+4. The story will appear in a text area below the controls.
+
+**Note:** Ollama must be running locally with the Llama 3.2 model loaded for this feature to work.
+
+---
+
+_Last updated: 2024-06-09_
