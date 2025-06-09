@@ -1,0 +1,114 @@
+[2025-01-31T13:21:36] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T13:21:48] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:47:13] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:48:04] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:48:53] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:49:16] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:49:56] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:50:50] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:51:02] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:51:41] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:52:29] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:53:28] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T14:54:17] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T15:52:39] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T15:54:57] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T17:35:40] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T17:35:46] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T17:58:14] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
+[2025-01-31T17:58:16] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\Documents\emoji story builder\src\app.py", line 194, in main
+    with open('readme.md', 'r', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'readme.md'
