@@ -96,68 +96,6 @@ class EmojiManager:
             logger.error(f"Failed to generate random emojis: {str(e)}")
             raise
 
-    def calculate_emoji_size(self, screen_width: int, screen_height: int, emoji_count: int) -> Tuple[int, int]:
-        """
-        Calculate the size for each emoji based on screen dimensions and count.
-        
-        Args:
-            screen_width: Width of the screen in pixels
-            screen_height: Height of the screen in pixels
-            emoji_count: Number of emojis to display
-            
-        Returns:
-            Tuple of (width, height) for each emoji in pixels
-        """
-        try:
-            # Calculate optimal grid layout
-            cols = min(emoji_count, 3)  # Max 3 emojis per row
-            rows = (emoji_count + cols - 1) // cols
-            
-            # Calculate maximum possible size
-            max_width = (screen_width * 0.9) // cols  # 90% of screen width
-            max_height = (screen_height * 0.6) // rows  # 60% of screen height
-            
-            # Use the smaller dimension to maintain square aspect ratio
-            size = min(max_width, max_height)
-            
-            # Ensure minimum size
-            size = max(50, size)  # Minimum 50px
-            
-            logger.info(f"Calculated emoji size: {size}x{size} pixels")
-            return (int(size), int(size))
-            
-        except Exception as e:
-            logger.error(f"Failed to calculate emoji size: {str(e)}")
-            raise
-
-    def get_emoji_layout(self, emojis: List[str], screen_width: int, screen_height: int) -> List[dict]:
-        """
-        Get the layout information for displaying emojis.
-        
-        Args:
-            emojis: List of emojis to display
-            screen_width: Width of the screen in pixels
-            screen_height: Height of the screen in pixels
-            
-        Returns:
-            List of dicts containing emoji and its display properties
-        """
-        try:
-            size = self.calculate_emoji_size(screen_width, screen_height, len(emojis))
-            
-            layout = []
-            for emoji_char in emojis:
-                layout.append({
-                    "emoji": emoji_char,
-                    "size": size
-                })
-            
-            return layout
-            
-        except Exception as e:
-            logger.error(f"Failed to generate emoji layout: {str(e)}")
-            raise
-
 # Example usage:
 if __name__ == "__main__":
     manager = EmojiManager()

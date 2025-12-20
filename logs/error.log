@@ -178,3 +178,43 @@ Traceback (most recent call last):
     with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-12-20T10:39:33] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\OneDrive\Documents\emoji-story-builder\src\app.py", line 266, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-12-20T10:39:53] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\OneDrive\Documents\emoji-story-builder\src\app.py", line 266, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-12-20T10:40:01] [ERROR] Failed to generate story: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+Traceback (most recent call last):
+  File "C:\Users\denni\OneDrive\Documents\emoji-story-builder\src\app.py", line 214, in main
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\denni\OneDrive\Documents\emoji-story-builder\.venv\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+[2025-12-20T10:40:01] [ERROR] Failed to load readme: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+Traceback (most recent call last):
+  File "C:\Users\denni\OneDrive\Documents\emoji-story-builder\src\app.py", line 266, in main
+    with open(r'emoji story builder\readme.md', 'r', encoding='utf-8') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'emoji story builder\\readme.md'
+[2025-12-20T11:01:34] [ERROR] Failed to generate story: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+Traceback (most recent call last):
+  File "C:\Users\denni\OneDrive\Documents\emoji-story-builder\src\app.py", line 219, in main
+    story = ollama_client.generate_story(
+        st.session_state.current_emojis,
+        word_count=word_count,
+        temperature=temperature
+    )
+  File "C:\Users\denni\OneDrive\Documents\emoji-story-builder\src\ollama_client.py", line 44, in generate_story
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\denni\OneDrive\Documents\emoji-story-builder\.venv\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://localhost:11434/api/generate

@@ -89,7 +89,8 @@ class Logger:
                 raise RuntimeError("Logger initialization failed")
             
             # Ensure timestamp is in UTC
-            timestamp = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S')
+            from datetime import timezone
+            timestamp = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
             formatted_message = f"{message}"
             
             self._logger.log(level, formatted_message, exc_info=exc_info)
