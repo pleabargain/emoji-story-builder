@@ -205,9 +205,9 @@ _Last updated: 2025-12-20_
 
 ### Challenges Encountered
 1.  **Mermaid Diagram Rendering**:
-    *   **Problem**: Streamlit's default markdown renderer does not support Mermaid diagrams. Using a custom HTML component (iframe) caused complications where the browser collapsed newlines, breaking Mermaid's syntax parser (e.g., `graph TD` became `graph TD`).
-    *   **Resolution**: We implemented a custom renderer in `app.py` that injects the Mermaid.js library directly. Crucially, we wrapped the diagram code in a `<pre>` tag instead of a `<div>` to preserve whitespace/newlines, and disabled HTML escaping to prevent arrow syntax (`-->`) from becoming entities (`-&gt;`).
-    *   **Status**: Fixed and working.
+    *   **Problem**: Streamlit's default markdown renderer does not support Mermaid diagrams. Attempts to use custom HTML components (iframe) failed due to browser sandbox restrictions and newline handling issues.
+    *   **Resolution Attempt**: We tried implementing a custom renderer in `app.py` using `st.components.v1.html` with the Mermaid.js library, avoiding HTML escaping and using `<pre>` tags. However, this did not consistently resolve the rendering issues in the Streamlit environment.
+    *   **Status**: **Unresolved**. Gemini 3 Pro could not find a stable fix for this problem within the constraints of the current Streamlit architecture. Diagrams may still fail to render or show syntax errors.
 
 2.  **UI State & Race Conditions**:
     *   **Problem**: Generated stories were logging to the console but not appearing in the UI. This was because the Streamlit script needed a "nudge" to re-render after the long-running API call completed.
