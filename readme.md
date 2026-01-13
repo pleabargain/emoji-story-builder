@@ -6,6 +6,9 @@ https://github.com/pleabargain/emoji-story-builder
 ## Project Overview
 A Streamlit-based application that helps users create stories using random emojis. The application dynamically sizes emojis to fit the screen, allows for note-taking, and maintains a history of interactions in JSON format with atomic file operations and comprehensive error logging.
 
+> [!IMPORTANT]
+> **Local Ollama Requirement:** This application runs only locally and requires Ollama to be running in the background. The AI story generation feature connects to a local Ollama instance at `http://localhost:11434`. Make sure Ollama is installed and running before starting the application.
+
 ## System Architecture
 graph TD
     A[User Interface] --> B[Emoji Manager]
@@ -79,8 +82,12 @@ sequenceDiagram
 
 ## Setup Instructions
 
+> [!NOTE]
+> **Prerequisite:** This application requires Ollama to be installed and running locally. The app connects to Ollama at `http://localhost:11434` for AI story generation features.
+
 1. Requirements:
    - Python 3.8+
+   - Ollama installed and running locally (see [Ollama installation guide](https://ollama.ai))
    - Required Python packages:
      ```
      streamlit
@@ -182,7 +189,7 @@ uv run python -m unittest discover src/tests
 > [!IMPORTANT]
 > **Integration Testing Note:** The file `src/tests/test_ollama_integration.py` contains a live integration test that targets a hardcoded model (`gemma3:4b`). If you do not have this model installed, the test will skip. You can manually edit this file to target a different locally installed model.
 
-_Last updated: 2025-12-20_
+_Last updated: 2026-01-13_
 
 ## Known Issues & Roadmap
 - [TODO] [Low Priority] Fix Mermaid diagram rendering in the Documentation tab. Currently, diagrams may fail to render or show syntax errors despite valid code.
